@@ -5,18 +5,25 @@ import javax.swing.*;
 
 public class LaminaDibujar extends JPanel{
 
-	private JButton clonar;
-	LaminaAnimacion miAnimacion;
+	
+	Componente miAnimacion;
+	Componente miEmpujar;
 	
 	public LaminaDibujar(){
 		setLayout(new GridLayout(2,2));
 		setBackground(Color.WHITE);
 		
 		miAnimacion=new LaminaAnimacion();
-		add(miAnimacion);
+		
+		miEmpujar=new DecoradorEmpujar(miAnimacion);
+		
+		
+		add((Component) miEmpujar);
+		
+		
 		
 
-		LaminaAnimacion animacionClonada=(LaminaAnimacion)miAnimacion.clonar();
+		/*LaminaAnimacion animacionClonada=(LaminaAnimacion)miAnimacion.clonar();
 		add(animacionClonada);
 		animacionClonada.arrancarHilo();
 		
@@ -28,7 +35,7 @@ public class LaminaDibujar extends JPanel{
 		add(animacionClonada3);
 		animacionClonada3.arrancarHilo();
 	
-		
+		*/
 	}
 	 
 		
