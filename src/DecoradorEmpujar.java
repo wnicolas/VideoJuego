@@ -43,7 +43,6 @@ public class DecoradorEmpujar extends DecoradorOpcional {
 				e.printStackTrace();
 			}
 			incremento++;
-			System.out.println("animacion");
 			if(incremento>6) {
 				incremento=0;
 				}

@@ -3,7 +3,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-public class LaminaDibujar extends JPanel{
+public class LaminaDibujar extends JPanel implements ActionListener{
 
 	
 	Componente miAnimacion;
@@ -14,11 +14,8 @@ public class LaminaDibujar extends JPanel{
 		setBackground(Color.WHITE);
 		
 		miAnimacion=new LaminaAnimacion();
-		
+		add((Component) miAnimacion);
 		miEmpujar=new DecoradorEmpujar(miAnimacion);
-		
-		
-		add((Component) miEmpujar);
 		
 		
 		
@@ -37,6 +34,15 @@ public class LaminaDibujar extends JPanel{
 	
 		*/
 	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		add((Component) miEmpujar);
+		
+	}
+	
+	
 	 
 		
 }
