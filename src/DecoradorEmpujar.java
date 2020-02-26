@@ -17,6 +17,12 @@ public class DecoradorEmpujar extends DecoradorOpcional {
 	}
 
 	@Override
+	public Prototype clonar() {
+		
+		return miComponente.clonar();
+	}
+	
+	@Override
 	public void animar() {
 		arrancarHilo();
 		bi=new BufferedImage(100,150,BufferedImage.TYPE_INT_RGB);
@@ -50,11 +56,6 @@ public class DecoradorEmpujar extends DecoradorOpcional {
 		
 	}
 
-	@Override
-	public Prototype clonar() {
-		
-		return miComponente.clonar();
-	}
 	
 public void paint(Graphics g) {
 		
